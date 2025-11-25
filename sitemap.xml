@@ -1,0 +1,44 @@
+---
+layout: nil
+---
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <url>
+        <loc>https://keldans.github.io</loc>
+        <lastmod>{{ site.time }}</lastmod>
+        <priority>1.0</priority>
+    </url>
+
+    {% for post in site.posts %}
+        {% if post.categories contains 'writing' %}
+            <url>
+                <loc>{{ page.url }}</loc>
+                <priority>0.8</priority>
+            </url>
+        {% endif %}
+    {% endfor %}
+
+    {% for post in site.posts %}
+        {% if post.categories contains 'logs' %}
+            <url>
+                <loc>{{ post.url }}</loc>
+                <lastmod>{{ post.date }}</lastmod>
+                <priority>0.6</priority>
+            </url>
+        {% endif %}
+    {% endfor %}
+
+    {% for post in site.posts %}
+        {% if post.categories contains 'notes' %}
+            <url>
+                <loc>{{ post.url }}</loc>
+                <lastmod>{{ post.date }}</lastmod>
+                <priority>0.4</priority>
+            </url>
+        {% endif %}
+    {% endfor %}
+
+</urlset>

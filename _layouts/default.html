@@ -1,0 +1,63 @@
+---
+layout: default
+---
+
+<!------------------------
+
+    KELDANS
+    v1.0.0
+
+    keldans.github.io
+    © 2025
+
+------------------------->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% if page.title %}{{ page.title }} &ndash; {% endif %}{{ site.title }}</title>
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="shortcut icon" type="image/png" href="/assets/images/favicon.png">
+
+    <link rel="canonical" href="https://keldans.github.io">
+    <link rel="me authn" href="https://github.com/keldans">
+    <link rel="me" href="https://mastodon.social/@keldans">
+    <link rel="alternate" type="application/atom+xml" href="/feed.xml">
+
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
+    <meta content="{{ page.description }}" name="description">
+    <meta content="{{ page.title }}" name="og:title">
+    <meta content="{{ page.title }}" name="og:site_name">
+    <meta content="{{ page.url }}" name="og:url">
+    <meta content="/assets/images/{{ page.image }}.webp" name="og:image">
+
+    <meta content="summary_large_image" name="twitter:card">
+    <meta content="{{ page.title }}" name="twitter:title">
+    <meta content="{{ page.description }}" name="twitter:description">
+    <meta content="/assets/images/{{ page.image }}.webp" name="twitter:image">
+
+    <meta name="fediverse:creator" content="@keldans@mastodon.social">
+
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="df5dc651-f776-447a-bcfa-fe665c377f32"></script>
+</head>
+<body>
+    <nav>
+        <p><a href="/"><strong>keldans</strong></a></p>
+        <p>make war on your weakness.<br>swe arc in progress.</p>
+    </nav>
+    <main>
+        {{ content }}
+    </main>
+    <footer>
+        <hr>
+        <p><small>per infernum ad astra.</small></p>
+        <p><small>
+            <a rel="me" href="https://mastodon.social/@keldans">mastodon</a><br>
+            <a rel="me" href="https://github.com/keldans">github</a><br>
+            <a href="/feed.xml">rss</a>
+        </small></p>
+    </footer>
+</body>
+</html>

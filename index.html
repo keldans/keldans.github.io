@@ -1,0 +1,46 @@
+---
+layout: default
+---
+
+<section>
+    <h3>logs</h3>
+    <ul class="list">
+        {% for post in site.posts %}
+            {% if post.categories contains 'logs' %}
+                <li>
+                    <a href="{{ post.url }}">
+                        {{ post.date | date_to_xmlschema }}&emsp;&emsp;{{ post.title }}
+                    </a>
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+</section>
+<section>
+    <h3>writing</h3>
+    <ul class="list">
+        {% for post in site.posts %}
+            {% if post.categories contains 'writing' %}
+                <li>
+                    <a href="{{ post.url }}">
+                        {{ post.date | date_to_xmlschema }}&emsp;&emsp;{{ post.title }}
+                    </a>
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+</section>
+<section>
+    <h3>notes</h3>
+    <ul class="list">
+        {% for post in site.posts %}
+            {% if post.categories contains 'notes' %}
+                <li>
+                    <a href="{{ post.url }}">
+                        {{ post.title }}
+                    </a>
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+</section>

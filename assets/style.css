@@ -1,0 +1,59 @@
+/*------------------------
+
+    KELDANS
+    v1.0.0
+
+    keldans.github.io
+    © 2025
+
+------------------------*/
+
+html {
+    background-color:#fdfdfd;
+    color:#000;
+    font-family:Times, serif;
+    font-size:13px;
+    line-height:18px;}
+
+a {
+    color:#C13D38;
+    text-decoration:none;}
+
+a:hover {text-decoration:underline;}
+
+nav, main, footer {
+    width:40%;
+    margin:0 auto;}
+
+nav, footer {padding:2vh 0 0 0;}
+
+nav > p {line-height:110%;}
+
+nav > p > a {color:#000;}
+
+nav > a:hover {text-decoration:underline;}
+
+main > section,
+main > article {padding:1vh 0;}
+
+.list {
+    list-style-type:none;
+    margin-left:0;
+    padding-left:0;}
+
+.list > li > a {
+    color:#000;
+    text-decoration:none;}
+
+.list > li > a:hover {color:#C13D38;}
+
+footer > hr {
+    height:0.5px;
+    border:none;
+    background-color:#000;
+    margin:0;
+    padding:0;}
+
+footer > p {line-height:110%;}
+
+footer > p > small > a {color:#000;}

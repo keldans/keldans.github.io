@@ -1,0 +1,38 @@
+---
+layout: nil
+---
+
+<rss xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+<channel>
+    <title><![CDATA[keldan]]></title>
+    <link>https://keldans.github.io</link>
+    <copyright>© 2025 keldans</copyright>
+    <pubDate>{{ site.time }}</pubDate>
+    <lastBuildDate>{{ site.time }}</lastBuildDate>
+    <atom:link href="https://keldans.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <logo>https://keldans.github.io/assets/favicon.png</logo>
+    <icon>https://keldans.github.io/assets/favicon.png</icon>
+    <image>
+        <url>https://keldans.github.io/assets/favicon.png</url>
+        <title>keldan</title>
+        <link>https://keldans.github.io</link>
+    </image>
+    <author>keldan</author>
+    <webMaster>keldan</webMaster>
+    <managingEditor>keldan</managingEditor>
+    <description>daily logs and findings from the journey</description>
+
+{% for post in site.posts %}
+<item>
+    <title><![CDATA[{{ post.title }}]]></title>
+    <author>keldan</author>
+    <link>https://keldans.github.io{{ post.permalink }}</link>
+    <guid isPermalink="true">https://keldans.github.io{{ post.permalink }}</guid>
+    <pubDate>{{ post.date }}</pubDate>
+    <description><![CDATA[{{ post.description }}]]></description>
+    <content:encoded type="text/html"><![CDATA[{{ post.content }}]]></content>
+</item>
+{% endfor %}
+
+</channel>
+</rss>
